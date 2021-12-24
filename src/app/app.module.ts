@@ -9,6 +9,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { HospitalComponent } from './hospital/hospital.component';
 import { HospitalDetailsComponent } from './hospital-details/hospital-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HospitalDetailsComponent } from './hospital-details/hospital-details.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
