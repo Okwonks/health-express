@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MenuItem } from '../menu-item';
 
 @Component({
@@ -6,16 +6,10 @@ import { MenuItem } from '../menu-item';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   menuItems: MenuItem[] = [
-    { label:'Login',     icon:'login', showOnDesktop:true, shownOnTablet:true, showOnMobile:true },
-    { label:'About',     icon:'help', shownOnTablet:true },
+    { label:'Login',     icon:'login',          showOnDesktop:true, showOnTablet:true, showOnMobile:true },
+    { label:'About',     icon:'help',           showOnTablet:true },
     { label:'Hospitals', icon:'local_hospital', showOnDesktop:true },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

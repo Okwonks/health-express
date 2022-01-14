@@ -2,6 +2,6 @@ export interface MenuItem {
   label: string;
   icon: string;
   showOnDesktop?: boolean;
-  shownOnTablet?: boolean;
+  showOnTablet?: boolean;
   showOnMobile?: boolean;
 }

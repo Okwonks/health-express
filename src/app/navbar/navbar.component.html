@@ -1,6 +1,9 @@
 <mat-toolbar fxLayout="row" color="primary">
   <span fxFlex>HealthExpress</span>
-  <button mat-button *ngFor="let item of menuItems" fxHide.xs>
+  <button mat-button *ngFor="let item of menuItems"
+        [fxShow]="item.showOnDesktop"
+        [fxShow.sm]="item.showOnTablet"
+        [fxShow.xs]="item.showOnMobile">
       <mat-icon class="mr">{{item.icon}}</mat-icon>
       {{item.label}}
   </button>
@@ -9,11 +12,15 @@
   </button>
   <mat-menu #dropMenu="matMenu">
       <ng-container *ngFor="let item of menuItems">
+        <div [fxShow]="!item.showOnDesktop"
+             [fxShow.sm]="!item.showOnTablet"
+             [fxShow.xs]="!item.showOnMobile">
           <button mat-menu-item>
               <mat-icon class="mr">{{item.icon}}</mat-icon>
               {{item.label}}
           </button>
           <mat-divider></mat-divider>
+        </div>
       </ng-container>
   </mat-menu>
 </mat-toolbar>
