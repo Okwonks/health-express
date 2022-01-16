@@ -8,8 +8,8 @@ import { MenuItem } from '../menu-item';
 })
 export class NavbarComponent {
   menuItems: MenuItem[] = [
-    { label:'Login',     icon:'login',          showOnDesktop:true, showOnTablet:true, showOnMobile:true },
-    { label:'About',     icon:'help',           showOnTablet:true },
-    { label:'Hospitals', icon:'local_hospital', showOnDesktop:true },
+    { label:'Login',     linkTo:'/login', icon:'login',          showOnDesktop:true, showOnTablet:true, showOnMobile:true },
+    { label:'About',     linkTo:'/about', icon:'help',           showOnTablet:true },
+    { label:'Hospitals', linkTo:'/hospitals', icon:'local_hospital', showOnDesktop:true },
   ];
 }

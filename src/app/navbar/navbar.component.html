@@ -1,6 +1,6 @@
 <mat-toolbar fxLayout="row" color="primary">
-  <span fxFlex>HealthExpress</span>
-  <button mat-button *ngFor="let item of menuItems"
+  <span fxFlex routerLink="/">HealthExpress</span>
+  <button routerLink="{{item.linkTo}}" mat-button *ngFor="let item of menuItems"
         [fxShow]="item.showOnDesktop"
         [fxShow.sm]="item.showOnTablet"
         [fxShow.xs]="item.showOnMobile">
